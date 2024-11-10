@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Platino</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: gray;
+            color: rgb(128, 128, 128);
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: grey;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+        .grid-top {
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 20px;
+        }
+        .grid-middle {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 20px;
+        }
+        .grid-item {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        .grid-item-main {
+            background-color: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html">Inicio</a>
+        <a href="dashboard.html">Tableros</a>
+        <a href="ajustes.html">Ajustes</a>
+        <a href="index.html">Cerrar Sesión</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Tablero Platino</h1>
+        </div>
+        <div class="grid grid-top">
+            <div class="grid-item">Item 1</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+            <div class="grid-item">Item 4</div>
+        </div>
+        <div class="grid grid-middle">
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 6</div>
+            <div class="grid-item">Item 7</div>
+            <div class="grid-item">Item 8</div>
+        </div>
+        <div class="grid">
+            <div class="grid-item-main">Central</div>
+        </div>
+    </div>
+</body>
+</html>
